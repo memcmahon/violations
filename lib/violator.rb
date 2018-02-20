@@ -19,6 +19,12 @@ class Violator
     end
   end
 
+  def categories
+    @violations.map do |violation|
+      violation.category
+    end.uniq
+  end
+
   def sort_by_date(category)
     @violations.select do |violation|
       violation.category.downcase == category.downcase
