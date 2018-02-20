@@ -8,6 +8,6 @@ puts "Count: #{violator.violations.count}"
 
 violator.categories.each do |category|
   puts "#{category}"
-  puts "- Earliest Violation: #{violator.sort_by_date(category).first.date}"
-  puts "- Latest Violation: #{violator.sort_by_date(category).last.date}"
+  puts "- Earliest Violation: #{violator.sort_by_date(category).first.date.split.first}"
+  puts "- Latest Violation: #{violator.sort_by_date(category).last.date.split.first}"
 end
