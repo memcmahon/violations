@@ -1,4 +1,6 @@
 class Violation
+  attr_reader :category, :date
+
   def initialize(attributes)
     @id = attributes[:id]
     @inspection_id = attributes[:inspection_id]
